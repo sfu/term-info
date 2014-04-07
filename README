@@ -1,0 +1,3 @@
+Script that can be used to extract the term data (current term, registration term, next registration term) from canvas.sfu.ca and saves them into files for caching.
+
+This is currently being used by CQ which is run via cron daily on author-p2.
