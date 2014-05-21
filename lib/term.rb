@@ -4,7 +4,9 @@ class Term
     if term_code.eql? "current"
       @term = Canvas::Server.parse_json("#{Canvas::Server.server}/sfu/api/v1/terms/#{term_code}")|| {}
     elsif term_code.eql? "next/2"
-      @term = Canvas::Server.parse_json("#{Canvas::Server.server}/sfu/api/v1/terms/#{term_code}")[1] || {}
+      @term = Canvas::Server.parse_json("#{Canvas::Server.server}/sfu/api/v1/terms/#{term_code}").last || {}
+    elsif term_code.eql? "next/3"
+      @term = Canvas::Server.parse_json("#{Canvas::Server.server}/sfu/api/v1/terms/#{term_code}").last || {}
     else   
       @term = Canvas::Server.parse_json("#{Canvas::Server.server}/sfu/api/v1/terms/#{term_code}").first || {}
     end  

@@ -19,6 +19,7 @@ begin
   next_term = Term.new("next")
   current_term = Term.new("current")
   next_registration_term = Term.new("next/2")
+  next2_registration_term = Term.new("next/3")
   registration_term = current_term
 
   if Utils.today > Utils.registration_date(current_term.start_at)
@@ -28,6 +29,7 @@ begin
 p "Current: #{current_term.name}"
 p "next next: #{next_registration_term.name}"
 p "registration: #{registration_term.name}"
+p "next2 registration: #{next2_registration_term.name}"
 #  Utils.save_term_to_file(current_file, current_term)
 #  Utils.save_term_to_file(registration_file, registration_term)
 
