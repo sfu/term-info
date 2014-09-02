@@ -22,7 +22,7 @@ begin
   next2_registration_term = Term.new("next/3")
   registration_term = current_term
 
-  if Utils.today > Utils.registration_date(current_term.start_at)
+  if Utils.today > Utils.registration_date(next_term.start_at)
     registration_term = next_term
   end
 
