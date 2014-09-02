@@ -22,10 +22,13 @@ begin
   next_registration_term = Term.new("next/2")
   next2_registration_term = Term.new("next/3")
   current_term = Term.new("current")
-  registration_term = current_term
 
   if Utils.today > Utils.registration_date(next_term.start_at)
     registration_term = next_term
+  else
+    registration_term = current_term
+    next_registration_term = Term.new("next")
+    next2_registration_term = Term.new("next/2")
   end
 
   Utils.save_term_to_file(current_file, current_term)
