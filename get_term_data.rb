@@ -13,7 +13,7 @@ require "canvas"
 require "term"
 
 current_file = "/home/daycms/scripts/current_term.txt"
-current_spiral_file = "/home/daycms/scripts/current_spiral_term.txt"
+current_spiral_file = "/home/daycms/scripts/spiral_term.txt"
 registration_file = "/home/daycms/scripts/registration_term.txt"
 next_registration_file = "/home/daycms/scripts/next_registration_term.txt"
 next2_registration_file = "/home/daycms/scripts/next2_registration_term.txt"
