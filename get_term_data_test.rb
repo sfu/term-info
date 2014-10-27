@@ -21,12 +21,16 @@ begin
   next_registration_term = Term.new("next/2")
   next2_registration_term = Term.new("next/3")
   registration_term = current_term
+  current_sprial_term = current_term
+  current_sprial_term = next_term if Utils.today > Utils.registration_spiral_date(next_term.start_at)
+
 
   if Utils.today > Utils.registration_date(next_term.start_at)
     registration_term = next_term
   end
 
 p "Current: #{current_term.name}"
+p "Spiral: #{current_sprial_term.name}"
 p "next next: #{next_registration_term.name}"
 p "registration: #{registration_term.name}"
 p "next2 registration: #{next2_registration_term.name}"
